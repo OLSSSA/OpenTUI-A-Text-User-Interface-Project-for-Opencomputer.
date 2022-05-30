@@ -46,7 +46,7 @@ do
 		if string.sub(Command,4,5) == '..' then
 			current_Path = filesystem.path(current_Path)
 		elseif string.sub(Command,4,4) == '.' then
-			os.sleep(1)
+			os.sleep() --I have no idea of what to put here,Use os sleep for temp. placement
 		else:
 			current_Path = current_Path .. Move_Path .. '/'
 		end
