@@ -52,10 +52,10 @@ do
 		end
 	else
 		term.clear()
-		if not shell.execute(Command) then
-			if not shell.execute(current_Path .. Command)
-				os.sleep(1)
-			end
+		if filesystem.exists('/bin/' .. Command) then
+			shell.execute(Command)	
+		else
+			shell.execute(current_Path .. Command)
 		end
 	end
 end
